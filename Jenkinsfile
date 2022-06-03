@@ -23,6 +23,7 @@ pipeline {
         stage('reporting') {
             steps {
                 junit testResults: 'target/surefire-reports/*.xml'
+                 archiveArtifacts artifacts: '**/*.war', followSymlinks: false
             }
 
         }
