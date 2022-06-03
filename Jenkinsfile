@@ -9,6 +9,7 @@ pipeline {
     }
     parameters {
         choice(name: 'GOAL', choices: ['compile', 'package', 'clean package'])
+    }
     stages {
         stage('Source Code') {
             steps {
